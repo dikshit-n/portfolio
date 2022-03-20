@@ -1,0 +1,44 @@
+.programinglanguage-container {
+  color: inherit;
+  margin: 10px;
+}
+.programinglanguage-container:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.programinglanguage img {
+  min-height: 100px;
+  min-width: 100px;
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+/* .programinglanguage .image {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100px;
+  min-width: 100px;
+  width: 100%;
+  height: 100%;
+} */
+.programinglanguage {
+  border: 1px solid lightgrey;
+  width: 100%;
+  box-shadow: 5px 5px 10px 0 lightgrey;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: white;
+}
+.programinglanguage:hover {
+  transform: scale(1.1);
+}
+
+.programinglanguage > .content {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+  padding: 10px;
+}

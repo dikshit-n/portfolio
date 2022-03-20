@@ -1,0 +1,144 @@
+.img-1-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-top: 50px;
+  top: 10px;
+}
+
+.img {
+  width: 650px;
+  height: 500px;
+}
+
+.img-1 {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  z-index: 0;
+}
+
+.Intro-container {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 300px;
+  left: 50px;
+  text-align: left;
+}
+
+.about-me {
+  text-align: left;
+}
+
+.about-me ul {
+  line-height: 50px;
+}
+
+@media (max-width: 887px) and (min-width: 580px) {
+  .Intro-container {
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: 0;
+  }
+  .social-media {
+    display: none;
+  }
+  .social-media img {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .Intro-container {
+    position: relative;
+    margin: 20px auto;
+    top: 0;
+    left: 0;
+  }
+  .img-1-container {
+    position: relative;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+  }
+  .img {
+    width: 300px;
+    height: 300px;
+  }
+  .Intro-container h1 {
+    font-size: 25px !important;
+  }
+  .social-media {
+    display: none;
+  }
+  .social-media img {
+    display: none;
+  }
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Progress {
+  width: fit-content;
+  height: fit-content;
+  margin: 5px auto;
+}
+
+.contact-social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+}
+.contact-social-media img {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.eschContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* .contact{
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      margin: auto;
+  } */
+.contact div {
+  margin-top: 10px;
+}
+
+.skills-container > div {
+  padding: 10px;
+}

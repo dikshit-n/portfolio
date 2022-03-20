@@ -1,0 +1,25 @@
+.Sidebar{
+    display: block;
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f0efed;
+    transition: all 0.3s ease-out;
+    z-index: 11;
+}
+
+.open{
+    transform: translateX(0);
+}
+
+.close{
+    transform: translateX(-100vw);
+}
+
+@media(min-width: 664px){
+    .Sidebar{
+        display: none;
+    }
+}

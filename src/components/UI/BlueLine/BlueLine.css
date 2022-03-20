@@ -1,0 +1,17 @@
+.BlueLine-container{
+    width: 100%;
+}
+
+.BlueLine{
+    width: 70px;
+    height: 3px;
+    background-color: blue;
+    border-radius: 20px ;
+    margin: 20px auto;
+}
+
+@media(max-width: 600px){
+    .BlueLine{
+        margin: 10px auto;
+    }
+}

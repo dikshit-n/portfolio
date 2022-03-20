@@ -1,0 +1,26 @@
+.Project {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 20px !important;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  margin: 10px auto;
+  background-color: rgb(255, 255, 255) !important;
+  box-shadow: 5px 10px rgb(238, 237, 237);
+}
+
+.Project h4 {
+  color: #216aec;
+}
+
+.Project p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #343a40;
+}
+
+.Project:hover {
+  box-shadow: 0 0 10px 0 rgb(105, 104, 104);
+}
