@@ -132,8 +132,8 @@ const HomePage = (props) => {
                 user experience.
               </li>
               <li>
-                For past 1.8 years, I have been part of contract based projects,
-                office work and as a freelancer.
+                For past <strong>1.8 years</strong>, I have been part of
+                contract based projects, office work and as a freelancer.
               </li>
               <li>Still practicing to perfectly master my skills.</li>
             </ul>
