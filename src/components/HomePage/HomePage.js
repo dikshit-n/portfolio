@@ -1,10 +1,13 @@
 import React from "react";
 import "./HomePage.css";
 import BlueLine from "../UI/BlueLine/BlueLine";
-import { Row, Col, Card } from "reactstrap";
+import { Row, Col } from "reactstrap";
 // import Progress from "react-circle-progress-bar";
-import Projects from "./Projects/Projects";
+// import Projects from "./Projects/Projects";
 import Skill from "../UI/Skill";
+import LinkedinIcon from "../../assets/social-icons/linkedin.png";
+import GithubIcon from "../../assets/social-icons/github.png";
+import ResumeIcon from "../../assets/social-icons/resume.png";
 import ReactLogo from "../../assets/img/react.png";
 import NextLogo from "../../assets/img/next.png";
 import ReduxLogo from "../../assets/img/redux.png";
@@ -16,17 +19,36 @@ import GitLogo from "../../assets/img/git.png";
 import MuiLogo from "../../assets/img/mui.png";
 import ReactstrapLogo from "../../assets/img/reactstrap.png";
 import BootstrapLogo from "../../assets/img/bootstrap.png";
+import JSLogo from "../../assets/img/js.png";
+import TSLogo from "../../assets/img/ts.png";
+import EmergeAbility from "../../assets/img/emergeability.png";
+import EmergeAbilityWebsite from "../../assets/img/emergeability-website.jpg";
 import ProgramingLanguageCard from "../UI/ProgramingLanguageCard";
+import Project from "../UI/Project";
+import Experience from "./Experience";
+
+const social = {
+  linkedin: {
+    image: LinkedinIcon,
+    link: "https://www.linkedin.com/in/dikshitkumar-n-b66177199/",
+  },
+  github: {
+    image: GithubIcon,
+    link: "https://github.com/dikshit-n?tab=repositories",
+  },
+  resume: {
+    image: ResumeIcon,
+    link: "https://dikshit-n.github.io/resume/Resume.pdf",
+  },
+};
 
 const projects = [
   {
-    name: "Workout App",
-    link: "https://github.com/dikshitkumarn/Daily-Workout",
-  },
-  { name: "Weather App", link: "https://github.com/dikshitkumarn/weatherapp" },
-  {
-    name: "Burger App",
-    link: "https://github.com/dikshitkumarn/Burger-Builder",
+    name: "EmergeAbility",
+    link: "http://emergeability.org/",
+    image: EmergeAbility,
+    embedLink: "http://emergeability.org/",
+    previewImage: EmergeAbilityWebsite,
   },
 ];
 
@@ -54,27 +76,14 @@ const skills = {
 };
 
 const programingLanguage = {
-  javascript: { link: "http://google.com", image: ReactLogo },
-  typescript: { link: "http://google.com", image: ReactLogo },
+  javascript: { link: "https://www.javascript.com/", image: JSLogo },
+  typescript: { link: "https://www.typescriptlang.org/", image: TSLogo },
 };
 
 const HomePage = (props) => {
   const gotoEmail = (e) => {
     e.preventDefault();
     window.open("mailto:dikshitkumarn@gmail.com");
-  };
-
-  const goto = (e) => {
-    if (e.target.name === "facebook") {
-      window.open("https://www.facebook.com/dikshit.dikshit.503", "_blank");
-    } else if (e.target.name === "instagram") {
-      window.open("https://www.instagram.com/dikshit_619/", "_blank");
-    } else if (e.target.name === "linkedin") {
-      window.open(
-        "https://www.linkedin.com/in/dikshitkumar-n-1713721a5/",
-        "_blank"
-      );
-    }
   };
 
   return (
@@ -91,24 +100,15 @@ const HomePage = (props) => {
           <h1>Hello, I am Dikshitkumar</h1>
           <h4>Front End Developer</h4>
           <div className="social-media">
-            <img
-              src={require("../../assets/social-icons/facebook.svg")}
-              alt=" "
-              name="facebook"
-              onClick={goto}
-            />
-            <img
-              src={require("../../assets/social-icons/linkedin.svg")}
-              alt=" "
-              name="linkedin"
-              onClick={goto}
-            />
-            <img
-              src={require("../../assets/social-icons/instagram.svg")}
-              alt=" "
-              name="instagram"
-              onClick={goto}
-            />
+            <a href={social.linkedin.link} target="_blank">
+              <img src={social.linkedin.image} alt="linkedin" />
+            </a>
+            <a href={social.github.link} target="_blank">
+              <img src={social.github.image} alt="github" />
+            </a>
+            <a href={social.resume.link} target="_blank">
+              <img src={social.resume.image} alt="resume" />
+            </a>
           </div>
         </div>
       </div>
@@ -128,8 +128,8 @@ const HomePage = (props) => {
           <Col lg="6" md="12" sm="12" xs="12" className="about-me">
             <ul>
               <li>
-                I develop innovative websites with attractive designs and with
-                great user experience.
+                I develop innovative websites with attractive designs and great
+                user experience.
               </li>
               <li>
                 For past 1.8 years, I have been part of contract based projects,
@@ -256,11 +256,14 @@ const HomePage = (props) => {
       <div id="projects" className="give-top-space">
         <Row className="zero mx-auto">
           <div className="Heading">
-            <h1 className="bold">Projects</h1>
+            <h1 className="bold">Featured Project</h1>
             <BlueLine />
-            <p>What I did ?</p>
           </div>
-          <Projects projects={projects} />
+          <div className="projects-container">
+            {projects.map((el, index) => (
+              <Project {...el} key={index} />
+            ))}
+          </div>
         </Row>
       </div>
       <div id="experience" className="give-top-space">
@@ -268,27 +271,9 @@ const HomePage = (props) => {
           <div className="Heading">
             <h1 className="bold">Experience</h1>
             <BlueLine />
-            <p>What am I going on ?</p>
           </div>
-          <Card
-            className="Project"
-            body
-            onClick={() => window.open("https://nanbanconnect.tech", "_blank")}
-          >
-            <Col>
-              <h4>Intern At Nanban Tech Ventures</h4>
-            </Col>
-          </Card>
-          <Card
-            className="Project"
-            body
-            onClick={() => window.open("https://leora.co", "_blank")}
-          >
-            <Col>
-              <h4>Front-End Developer</h4>
-            </Col>
-          </Card>
         </Row>
+        <Experience />
       </div>
       <div id="contact" className="give-top-space">
         <Row className="zero mx-auto">
@@ -312,26 +297,17 @@ const HomePage = (props) => {
             <p>9600714338</p>
           </Col>
           <Col lg="4" md="12" sm="12" xs="12">
-            <h4>Social Media</h4>
+            <h4>Social Links</h4>
             <div className="contact-social-media">
-              <img
-                src={require("../../assets/social-icons/facebook.svg")}
-                alt=" "
-                name="facebook"
-                onClick={goto}
-              />
-              <img
-                src={require("../../assets/social-icons/linkedin.svg")}
-                alt=" "
-                name="linkedin"
-                onClick={goto}
-              />
-              <img
-                src={require("../../assets/social-icons/instagram.svg")}
-                alt=" "
-                name="instagram"
-                onClick={goto}
-              />
+              <a href={social.linkedin.link} target="_blank">
+                <img src={social.linkedin.image} alt="linkedin" />
+              </a>
+              <a href={social.github.link} target="_blank">
+                <img src={social.github.image} alt="github" />
+              </a>
+              <a href={social.resume.link} target="_blank">
+                <img src={social.resume.image} alt="resume" />
+              </a>
             </div>
           </Col>
         </Row>

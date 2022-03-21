@@ -88,10 +88,16 @@
   width: fit-content;
   height: fit-content;
 }
+.social-media a {
+  transition: transform 0.3s ease;
+}
+.social-media a:hover {
+  transform: scale(1.1);
+}
 
 .social-media img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   margin: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -112,8 +118,8 @@
   height: fit-content;
 }
 .contact-social-media img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   margin: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -141,4 +147,11 @@
 
 .skills-container > div {
   padding: 10px;
+}
+
+.projects-container {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }

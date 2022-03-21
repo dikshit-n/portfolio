@@ -17,6 +17,7 @@
     "react-scripts": "3.4.1",
     "react-side-bar": "^1.0.4",
     "react-sidebar-styled": "0.0.1",
+    "react-vertical-timeline-component": "^3.5.2",
     "reactstrap": "^8.5.1"
   },
   "scripts": {

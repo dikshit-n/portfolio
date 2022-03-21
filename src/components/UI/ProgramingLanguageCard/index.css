@@ -1,6 +1,7 @@
 .programinglanguage-container {
   color: inherit;
   margin: 10px;
+  width: fit-content;
 }
 .programinglanguage-container:hover {
   text-decoration: none;
@@ -9,8 +10,8 @@
 .programinglanguage img {
   min-height: 100px;
   min-width: 100px;
-  width: 250px;
   height: auto;
+  width: 275px;
   object-fit: cover;
 }
 /* .programinglanguage .image {
@@ -25,7 +26,7 @@
 .programinglanguage {
   border: 1px solid lightgrey;
   width: 100%;
-  box-shadow: 5px 5px 10px 0 lightgrey;
+  box-shadow: 5px 10px rgb(238, 237, 237);
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;

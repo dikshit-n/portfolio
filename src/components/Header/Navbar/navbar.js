@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Nav, NavItem, NavLink, Navbar } from "reactstrap";
 import "./navbar.css";
 import { withRouter } from "react-router";
+import Logo from "../../Logo";
 
 const NavigationBar = (props) => {
   const [activeStatus, setActiveStatus] = useState({
@@ -37,7 +38,12 @@ const NavigationBar = (props) => {
 
   return (
     <div className="Navbar">
-      <Navbar color="dark" dark expand="md">
+      <Navbar
+        color="dark"
+        dark
+        expand="md"
+        style={{ justifyContent: "space-between" }}
+      >
         <Nav pills>
           <NavItem>
             <NavLink
@@ -86,7 +92,7 @@ const NavigationBar = (props) => {
               name="projects"
               href="#projects"
             >
-              Projects
+              Featured Project
             </NavLink>
           </NavItem>
           <NavItem>
@@ -110,6 +116,7 @@ const NavigationBar = (props) => {
             </NavLink>
           </NavItem>
         </Nav>
+        <Logo style={{ marginRight: 10 }} />
       </Navbar>
     </div>
   );
