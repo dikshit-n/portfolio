@@ -140,7 +140,7 @@ const HomePage = (props) => {
           </Col>
         </Row>
       </div>
-      <div id="whatiknow" className="give-top-space">
+      <div id="technicalskills" className="give-top-space">
         <Row className="zero mx-auto">
           <div className="Heading">
             <h1>Technical Skills</h1>
