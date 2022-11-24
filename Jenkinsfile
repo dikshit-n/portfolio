@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
                 sh 'docker build -t dikshit-portfolio .'
             }
         }
-        stage('Stop Old container') {
+        stage('Stop old container') {
             steps {
-                echo 'docker rm dikshit-portfolio --force'
+                sh 'docker rm dikshit-portfolio --force'
             }
         }
-        stage('Start new container') {
+        stage('Start New Container') {
             steps {
-                echo 'docker run -p 3001:3000 -d --name dikshit-portfolio dikshit-portfolio'
+                sh 'docker run -p 3000:3000 -d --name dikshit-portfolio dikshit-portfolio'
             }
         }
     }
