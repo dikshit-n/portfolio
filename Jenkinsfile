@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Start New Container') {
             steps {
-                sh 'docker run -p 3000:3000 -d --name dikshit-portfolio dikshit-portfolio'
+                sh 'docker run -p 3001:3000 -d --name dikshit-portfolio dikshit-portfolio'
             }
         }
     }
