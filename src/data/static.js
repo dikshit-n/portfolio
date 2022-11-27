@@ -6,11 +6,12 @@ import ReactLogo from "../assets/img/react.png";
 import NextLogo from "../assets/img/next.png";
 import ReduxLogo from "../assets/img/redux.png";
 import ReactQueryLogo from "../assets/img/react-query.png";
-import HTMLLogo from "../assets/img/html.png";
-import CSSLogo from "../assets/img/css.png";
+// import HTMLLogo from "../assets/img/html.png";
+// import CSSLogo from "../assets/img/css.png";
 import SCSSLogo from "../assets/img/scss.png";
 import GitLogo from "../assets/img/git.png";
 import MuiLogo from "../assets/img/mui.png";
+import FluentUILogo from "../assets/img/fluent-ui.png";
 import ReactstrapLogo from "../assets/img/reactstrap.png";
 import BootstrapLogo from "../assets/img/bootstrap.png";
 import JSLogo from "../assets/img/js.png";
@@ -24,7 +25,7 @@ export const myDetails = {
         designation: 'Front End Developer',
         aboutMe: [
             'I develop innovative websites with attractive designs and great user experience.',
-            'For past 1.8 years, I have been part of contract based projects, office work and as a freelancer.',
+            'For past 2.5 years, I have been part of contract based projects, full time developer and as a freelancer.',
             'Still practicing to perfectly master my skills.'
         ],
         contact: {
@@ -56,26 +57,30 @@ export const myDetails = {
         },
     ],
     skills: {
-        react: { link: "https://reactjs.org/", image: ReactLogo },
-        next: { link: "https://nextjs.org/", image: NextLogo },
-        redux: { link: "https://redux.js.org/", image: ReduxLogo },
+        react: { link: "https://reactjs.org/", image: ReactLogo, name: 'React JS' },
+        next: { link: "https://nextjs.org/", image: NextLogo, name: 'Next JS' },
+        redux: { link: "https://redux.js.org/", image: ReduxLogo, name: 'Redux JS' },
         reactQuery: {
         link: "https://react-query.tanstack.com/",
         image: ReactQueryLogo,
+        name: 'React Query'
         },
-        html: {
-        link: "https://www.w3schools.com/html/html_intro.asp",
-        image: HTMLLogo,
-        },
-        css: {
-        link: "https://www.w3schools.com/css/css_intro.asp",
-        image: CSSLogo,
-        },
-        scss: { link: "https://sass-lang.com/", image: SCSSLogo },
-        git: { link: "https://github.com/", image: GitLogo },
-        mui: { link: "https://mui.com/", image: MuiLogo },
-        reactstrap: { link: "https://reactstrap.github.io/", image: ReactstrapLogo },
-        bootstrap: { link: "https://getbootstrap.com/", image: BootstrapLogo },
+        // html: {
+        // link: "https://www.w3schools.com/html/html_intro.asp",
+        // image: HTMLLogo,
+        // name: 'HTML'
+        // },
+        // css: {
+        // link: "https://www.w3schools.com/css/css_intro.asp",
+        // image: CSSLogo,
+        // name: 'CSS'
+        // },
+        scss: { link: "https://sass-lang.com/", image: SCSSLogo, name: 'SCSS' },
+        git: { link: "https://github.com/", image: GitLogo, name: 'Git / Github' },
+        mui: { link: "https://mui.com/", image: MuiLogo, name: 'Material UI' },
+        fluentUI: { link: "https://react.fluentui.dev/", image: FluentUILogo, name: 'Fluent UI' },
+        reactstrap: { link: "https://reactstrap.github.io/", image: ReactstrapLogo, name: 'Reactstrap' },
+        bootstrap: { link: "https://getbootstrap.com/", image: BootstrapLogo, name: 'Bootstrap' },
     },
     programingLanguage: {
         javascript: { link: "https://www.javascript.com/", image: JSLogo },

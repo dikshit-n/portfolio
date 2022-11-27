@@ -8,6 +8,7 @@ import InternIcon from "../../../assets/img/internship.png";
 import FreelanceIcon from "../../../assets/img/freelance.png";
 import ContractIcon from "../../../assets/img/contract.png";
 import FulltimeIcon from "../../../assets/img/fulltime.png";
+import SeniorDeveloperIcon from "../../../assets/img/senior-developer.png";
 import TimeIcon from "../../../assets/img/time.png";
 
 const Experience = (props) => {
@@ -125,6 +126,33 @@ const Experience = (props) => {
           </li>
           <li>
             Upgraded my skills to use <strong>Material UI</strong>.
+          </li>
+        </ul>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        iconStyle={iconStyle}
+        contentStyle={{ ...cardStyleLeft, borderTop: "3px solid black" }}
+        date="April 2022 - Present"
+        icon={
+          <div style={iconContainerStyle}>
+            <img src={SeniorDeveloperIcon} alt="Fulltime" style={imageStyle} />
+          </div>
+        }
+      >
+        <h4>Senior Front-end Developer (Fulltime)</h4>
+        <h6>AVEON Info tech - Coimbatore</h6>
+        <ul>
+          <li>
+            <strong>React JS (Typescript)</strong> developer.
+          </li>
+          <li>
+            Scratched the surface of <strong>Node JS, Microservices, React Native</strong>.
+          </li>
+          <li>
+            Upgraded skills to use <strong>Fluent UI</strong> with React.
+          </li>
+          <li>
+            Hands on experience on working with <strong>Agile methodology</strong>.
           </li>
         </ul>
       </VerticalTimelineElement>

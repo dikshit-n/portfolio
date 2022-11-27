@@ -70,83 +70,15 @@ const HomePage = (props) => {
           </div>
           <Col sm="12" md="10" className="mx-auto">
             <Row className="skills-container mx-auto">
-              <Col sm="12" md="4">
-                <Skill
-                  name="React JS"
-                  link={myDetails.skills.react.link}
-                  image={myDetails.skills.react.image}
-                />
-              </Col>
-              <Col sm="12" md="4">
-                <Skill
-                  name="Next JS"
-                  link={myDetails.skills.next.link}
-                  image={myDetails.skills.next.image}
-                />
-              </Col>
-              <Col sm="12" md="4">
-                <Skill
-                  name="Redux JS"
-                  link={myDetails.skills.redux.link}
-                  image={myDetails.skills.redux.image}
-                />
-              </Col>
-              <Col sm="12" md="4">
-                <Skill
-                  name="React query"
-                  link={myDetails.skills.reactQuery.link}
-                  image={myDetails.skills.reactQuery.image}
-                />
-              </Col>
-              <Col sm="12" md="4">
-                <Skill
-                  name="HTML"
-                  link={myDetails.skills.html.link}
-                  image={myDetails.skills.html.image}
-                />
-              </Col>
-              <Col sm="12" md="4">
-                <Skill
-                  name="CSS"
-                  link={myDetails.skills.css.link}
-                  image={myDetails.skills.css.image}
-                />
-              </Col>
-              <Col sm="12" md="4">
-                <Skill
-                  name="SCSS"
-                  link={myDetails.skills.scss.link}
-                  image={myDetails.skills.scss.image}
-                />
-              </Col>
-              <Col sm="12" md="4">
-                <Skill
-                  name="Git / Github"
-                  link={myDetails.skills.git.link}
-                  image={myDetails.skills.git.image}
-                />
-              </Col>
-              <Col sm="12" md="4">
-                <Skill
-                  name="Material UI"
-                  link={myDetails.skills.mui.link}
-                  image={myDetails.skills.mui.image}
-                />
-              </Col>
-              <Col sm="12" md="4">
-                <Skill
-                  name="Reactstrap"
-                  link={myDetails.skills.reactstrap.link}
-                  image={myDetails.skills.reactstrap.image}
-                />
-              </Col>
-              <Col sm="12" md="4">
-                <Skill
-                  name="Bootstrap"
-                  link={myDetails.skills.bootstrap.link}
-                  image={myDetails.skills.bootstrap.image}
-                />
-              </Col>
+              {Object.keys(myDetails.skills).map((key) => (
+                <Col sm="12" md="4" key={key}>
+                  <Skill
+                    name={myDetails.skills[key].name}
+                    link={myDetails.skills[key].link}
+                    image={myDetails.skills[key].image}
+                  />
+                </Col>
+              ))}
             </Row>
           </Col>
         </Row>
