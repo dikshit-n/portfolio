@@ -10,9 +10,9 @@ export const SITE = {
   phone: '+91 9600714338',
   location: 'Tamil Nadu, India',
   // TODO: replace these placeholders with your real handles
-  linkedin: 'https://www.linkedin.com/in/dikshitkumarn',
-  github: 'https://github.com/dikshitkumarn',
-  resumeUrl: '/resume.pdf',
+  linkedin: 'https://www.linkedin.com/in/dikshit-n',
+  github: 'https://github.com/dikshit-n',
+  resumeUrl: 'https://dikshit-n.github.io/resume/portfolio-resume.pdf',
   edition: 'React & Mobile Edition',
 } as const;
 
@@ -30,7 +30,7 @@ export const HERO = {
 /* ----------------------------------------------------------------------------
    About / Summary / Stats
 ---------------------------------------------------------------------------- */
-export const SUMMARY = `I build production React.js and React Native applications for US, Canadian, and UAE clients — most recently an offline-first healthcare app on iOS and Android processing 10,000 appointments per day. I enjoy owning architecture end-to-end: offline sync, real-time data layers, authentication bridges, and the release pipeline that ships them. Lately I've been building agentic systems too, including a multi-agent PR reviewer (Githena) and custom MCP server integrations for Claude Code.`;
+export const SUMMARY = `I build production React.js and React Native applications for US, Canadian, and UAE clients — most recently an offline-first healthcare app on iOS and Android processing 10,000 appointments per day. I own architecture end-to-end: offline sync, real-time data layers, authentication bridges, and the release pipeline that ships them. Lately I've been building agentic systems too, including a multi-agent PR reviewer (Githena) and custom MCP server integrations for Claude Code.`;
 
 export const STATS: Stat[] = [
   { value: '5+', label: 'Years shipping' },
@@ -96,10 +96,8 @@ export const TECH_STACK: TechCategory[] = [
     name: 'AI Engineering',
     items: [
       'Multi-Agent Orchestration',
-      'LLM Integration',
       'Model Context Protocol (MCP)',
       'Prompt Engineering',
-      'Retrieval-Augmented Generation',
       'Claude Code',
       'AI-Assisted Development',
     ],
@@ -113,7 +111,6 @@ export const TECH_STACK: TechCategory[] = [
       'Real-Time Data Processing',
       'Micro-Frontend Architecture',
       'Microservices',
-      'Workflow Engine Design',
     ],
   },
   {
@@ -127,6 +124,7 @@ export const TECH_STACK: TechCategory[] = [
       'Jenkins',
       'CI/CD',
       'LogZ',
+      'DataDog',
       'Webpack',
       'Vite',
       'DynamoDB',
@@ -165,7 +163,6 @@ export const EXPERIENCE: Role[] = [
       'Implemented background location tracking at 5s intervals on iOS and Android, reaching a 95% capture rate, then redesigned memory management to eliminate crashes on both platforms.',
       'Owned the mobile release process: Google Play deployments plus EAS Build distribution to testers via Firebase App Distribution; release cadence accelerated from monthly → bi-weekly.',
       'Led a team of 5 engineers in Agile / Scrum — ran sprint planning, mentored on React + React Native best practices, cut code review cycles by 2 days.',
-      'Built Githena: an event-driven multi-agent PR reviewer — 6 specialised LLM agents coordinated by a supervisor quality gate, triggered by GitHub webhooks, posting a single auditable review within 60s of PR readiness.',
       'Engineered custom MCP server integrations and established agentic coding workflows with Claude Code plus reusable prompt-engineering patterns adopted across the team.',
       'Architected an OAuth 2.0 → AWS Cognito auth bridge and a DynamoDB Streams → Postgres CDC sync pipeline that eliminated data inconsistency between the mobile offline DB and source-of-truth.',
     ],
@@ -289,10 +286,10 @@ export const PROJECTS: Project[] = [
    Currently
 ---------------------------------------------------------------------------- */
 export const CURRENTLY = {
-  working: 'Githena — a multi-agent PR reviewer for GitHub.',
-  collab: 'Agentic AI workflows and Claude Code–powered developer tooling.',
-  learning: 'Scalable system design, MCP ecosystem, advanced agent orchestration.',
-  ask: 'React Native offline-first, AWS serverless, healthcare compliance, AI engineering.',
+  working: 'Developer productivity through agentic coding workflows and reusable prompt-engineering patterns',
+  collab: 'Open-source maintainers and engineering teams on improving developer-facing documentation and tooling',
+  learning: 'Scalable system design, MCP ecosystem, advanced agent orchestration, AI-assisted development with claude code.',
+  ask: 'React JS performant apps, React Native offline-first, AWS serverless, healthcare compliance, AI engineering.',
 };
 
 /* ----------------------------------------------------------------------------
@@ -313,7 +310,7 @@ export const ACHIEVEMENTS = [
 export const EDUCATION = {
   school: 'Anna University',
   location: 'Chennai, India',
-  period: '2018 – 2022',
+  period: '2018 - 2022',
   degree: 'B.Tech, Information Technology',
   cgpa: '8.49',
 };

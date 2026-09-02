@@ -113,7 +113,7 @@ export function ContactSection() {
                 variants={fadeUp}
                 className="eyebrow mt-8 text-paper/50"
               >
-                Based in {SITE.location} — open to remote roles worldwide.
+                Based in {SITE.location} — open to roles worldwide.
               </motion.p>
             </div>
 
