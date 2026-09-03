@@ -9,7 +9,7 @@ export function ExperienceSection() {
   const meta = SECTION_META.experience!;
 
   return (
-    <section id="experience" className="wrap scroll-mt-24 py-20 md:py-28">
+    <section id="experience" className="wrap scroll-mt-5 py-20 md:py-28">
       <SectionHeader
         number={meta.number}
         tag={meta.tag}

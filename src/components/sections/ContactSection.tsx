@@ -41,7 +41,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 border-t-2 border-ink bg-ink py-20 text-paper md:py-28"
+      className="scroll-mt-14 border-t-2 border-ink bg-ink py-20 text-paper md:py-28"
     >
       <div className="wrap">
         <motion.div

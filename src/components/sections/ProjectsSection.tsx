@@ -1,10 +1,78 @@
 import { motion } from 'framer-motion';
-import { Lock } from 'lucide-react';
+import { ArrowUpRight, Github, Lock } from 'lucide-react';
 import { PROJECTS, SECTION_META } from '@/data/portfolio';
 import { SectionHeader } from '@/components/ui/SectionHeader';
-import { LinkArrow } from '@/components/ui/LinkArrow';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import type { Project } from '@/types/portfolio';
+import { cn } from '@/lib/cn';
+
+function isGitHubUrl(url: string) {
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    return host === 'github.com' || host === 'www.github.com';
+  } catch {
+    return false;
+  }
+}
+
+type ProjectLinkProps = {
+  project: Project;
+  /** 'lead' = full-size card (paper-on-ink hover); 'row' = compact list entry. */
+  variant: 'lead' | 'row';
+};
+
+function ProjectLink({ project, variant }: ProjectLinkProps) {
+  const url = project.url;
+
+  if (!url) {
+    return variant === 'lead' ? (
+      <span className="mt-8 inline-flex items-center gap-2 font-display text-lg font-bold text-ink-soft transition-colors group-hover:text-paper/70">
+        <Lock size={18} />Private client work
+      </span>
+    ) : (
+      <span className="mt-5 inline-flex items-center gap-1.5 self-start font-display text-base font-bold text-ink-soft">
+        <Lock size={14} />Private
+      </span>
+    );
+  }
+
+  const isGh = isGitHubUrl(url);
+  const label = isGh ? 'View code' : 'View live';
+  const aria = isGh
+    ? `Open ${project.name} source on GitHub`
+    : `Open ${project.name} live site`;
+
+  const sharedClass = cn(
+    'group/link inline-flex items-center gap-2 font-display text-base font-bold',
+    variant === 'lead' &&
+      'mt-8 text-ink-soft transition-colors group-hover:text-paper',
+    variant === 'row' && 'mt-5 self-start',
+  );
+
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={aria}
+      className={sharedClass}
+    >
+      {isGh ? (
+        <Github
+          size={variant === 'lead' ? 18 : 16}
+          strokeWidth={2}
+          className="text-accent transition-transform duration-300 group-hover/link:scale-110"
+        />
+      ) : (
+        <ArrowUpRight
+          size={variant === 'lead' ? 18 : 16}
+          className="text-accent transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+        />
+      )}
+      <span className="link-anim">{label}</span>
+    </a>
+  );
+}
 
 function LeadCard({ project, variants }: { project: Project; variants: import('framer-motion').Variants }) {
   return (
@@ -34,21 +102,7 @@ function LeadCard({ project, variants }: { project: Project; variants: import('f
           </span>
         ))}
       </div>
-      {project.url ? (
-        <LinkArrow
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`Open ${project.name} live site`}
-          className="mt-8 text-ink-soft transition-colors group-hover:text-paper"
-        >
-          View live
-        </LinkArrow>
-      ) : (
-        <span className="mt-8 inline-flex items-center gap-2 font-display text-lg font-bold text-ink-soft transition-colors group-hover:text-paper/70">
-          <Lock size={18} />Private client work
-        </span>
-      )}
+      <ProjectLink project={project} variant="lead" />
     </motion.article>
   );
 }
@@ -84,21 +138,7 @@ function ProjectRow({ project, variants }: { project: Project; variants: import(
           </span>
         ))}
       </div>
-      {project.url ? (
-        <LinkArrow
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`Open ${project.name} live site`}
-          className="mt-5 self-start"
-        >
-          View live
-        </LinkArrow>
-      ) : (
-        <span className="mt-5 inline-flex items-center gap-1.5 self-start font-display text-base font-bold text-ink-soft">
-          <Lock size={14} />Private
-        </span>
-      )}
+      <ProjectLink project={project} variant="row" />
     </motion.article>
   );
 }
@@ -112,7 +152,7 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="scroll-mt-24 border-y border-ink bg-paper-2 py-20 md:py-28"
+      className="scroll-mt-5 border-y border-ink bg-paper-2 py-20 md:py-28"
     >
       <div className="wrap">
         <SectionHeader

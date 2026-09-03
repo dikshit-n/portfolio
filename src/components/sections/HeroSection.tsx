@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { ArrowDownRight, FileText, MapPin } from 'lucide-react';
-import { HERO, MARQUEE_TECH, SITE } from '@/data/portfolio';
-import { Marquee } from '@/components/ui/Marquee';
+import { HERO,
+  // MARQUEE_TECH,
+SITE } from '@/data/portfolio';
+// import { Marquee } from '@/components/ui/Marquee';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 export function HeroSection() {
@@ -115,7 +117,7 @@ export function HeroSection() {
       </div>
 
       <div className="mt-12 md:mt-16">
-        <Marquee items={MARQUEE_TECH} />
+        {/* <Marquee items={MARQUEE_TECH} /> */}
       </div>
     </section>
   );

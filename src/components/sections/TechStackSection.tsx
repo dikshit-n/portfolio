@@ -11,7 +11,7 @@ export function TechStackSection() {
   return (
     <section
       id="techstack"
-      className="scroll-mt-24 border-y border-ink bg-paper-2 py-20 md:py-28"
+      className="scroll-mt-5 border-y border-ink bg-paper-2 py-20 md:py-28"
     >
       <div className="wrap">
         <SectionHeader

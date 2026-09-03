@@ -35,7 +35,7 @@ export const SUMMARY = `I build production React.js and React Native application
 export const STATS: Stat[] = [
   { value: '5+', label: 'Years shipping' },
   { value: '10K+', label: 'Appointments/day' },
-  { value: '4–5', label: 'Engineers led' },
+  { value: '4-5', label: 'Engineers led' },
   { value: '8.49', label: 'B.Tech CGPA' },
 ];
 
@@ -217,67 +217,58 @@ export const EXPERIENCE: Role[] = [
 export const PROJECTS: Project[] = [
   {
     index: '01',
-    name: 'Githena',
-    categories: ['AI', 'DevTools', 'Open Source'],
+    name: 'EmergeAbility',
+    categories: ['Landing Page', 'Startup', 'A11y'],
     description:
-      'Event-driven multi-agent PR reviewer. Six specialised LLM agents coordinated by a supervisor quality gate, triggered through GitHub webhooks and posting a single auditable review within 60 seconds of PR readiness. Per-repo behaviour driven by config files.',
-    tech: ['Multi-Agent Orchestration', 'LLM APIs', 'GitHub Webhooks', 'TypeScript'],
+      'Landing page for a startup with a mission to fight neurodiversity. Live demo on Vercel. Designed and built end-to-end with responsive layouts and accessible markup.',
+    tech: ['React', 'CSS', 'Vercel'],
     isLead: true,
-    private: true,
+    url: 'https://emergeability.vercel.app/',
   },
   {
     index: '02',
-    name: 'electric-sql/electric',
-    categories: ['Open Source', 'Docs'],
-    description:
-      'Contributed merged documentation improvements to electric-sql/electric (10.3k ★, Apache-2.0) — added cross-links that improved discoverability of error-handling guidance. Merged by a maintainer within 33 hours of submission.',
-    tech: ['Documentation', 'Markdown', 'OSS'],
-    url: 'https://github.com/electric-sql/electric',
-    isLead: true,
-  },
-  {
-    index: '03',
     name: 'Healthcare Appointment App',
     categories: ['Mobile', 'Offline-First', 'Healthcare'],
     description:
       'Offline-first iOS + Android app for appointment processing in low-connectivity environments. Custom offline sync, real-time data layer, HIPAA / GDPR-compliant PHI flow. Processing 10,000 appointments/day.',
     tech: ['React Native', 'Expo', 'AWS AppSync', 'AWS Amplify', 'AWS Lambda'],
+    isLead: true,
     private: true,
+  },
+  {
+    index: '03',
+    name: 'reactjs-boilerplates',
+    categories: ['Boilerplate', 'Open Source', 'MUI'],
+    description:
+      'A collection of React + TypeScript + MUI starter projects. The recommended flavor (with-mui/typescript-v3) is the most complete baseline — Redux Toolkit, React Query, role-based routing, Formik/Yup, theming, and ready-made window.flash / window.modal notifications.',
+    tech: ['React', 'TypeScript', 'MUI v5', 'Redux Toolkit', 'React Query', 'Formik', 'Yup'],
+    url: 'https://github.com/dikshit-n/reactjs-boilerplates',
   },
   {
     index: '04',
-    name: 'Soutrali',
-    categories: ['Admin', 'UAE'],
+    name: 'react-mfs',
+    categories: ['Micro-Frontend', 'Boilerplate', 'Webpack'],
     description:
-      'Frontend for a UAE cab-booking administration platform — cut cash transactions by 90%. Built during a remote engagement with Leora Solutions LLC.',
-    tech: ['React.js', 'Redux', 'REST APIs'],
-    private: true,
+      'Micro Frontend boilerplate with shared state, routes, and module federation using React + Webpack. Host exposes a Zustand counter store and consumes each remote’s Router inside a single BrowserRouter, so state stays in sync across independently deployed apps.',
+    tech: ['React', 'Webpack', 'Module Federation', 'Zustand'],
+    url: 'https://github.com/dikshit-n/react-mfs',
   },
   {
     index: '05',
-    name: 'EzWalkin',
-    categories: ['Marketing', 'UAE'],
+    name: 'ui-accounts (live-apps-in)',
+    categories: ['Auth', 'Open Source', 'Fluent UI'],
     description:
-      'UAE mall customer-engagement platform — personalised advertisement and discount features contributing to a 20% sales lift.',
-    tech: ['React.js', 'Custom Hooks', 'Component Architecture'],
-    private: true,
+      'Social authentication UI for the Live Apps product suite — Google + Microsoft sign-in via MSAL, OAuth callback flow, Redux-based session state, and Fluent UI components. Live at ui-accounts.vercel.app.',
+    tech: ['React', 'Fluent UI', 'MSAL', 'Redux', 'OAuth'],
+    url: 'https://github.com/live-apps-in/ui-accounts',
   },
   {
     index: '06',
-    name: 'Blood Donor Platform',
-    categories: ['Web', 'Mobile', 'Health'],
+    name: 'Githena',
+    categories: ['AI', 'DevTools', 'Open Source'],
     description:
-      'React admin web platform + companion React Native iOS / Android app for a blood-donor platform supporting 500+ donation requests.',
-    tech: ['React.js', 'React Native', 'Redux'],
-    private: true,
-  },
-  {
-    index: '07',
-    name: 'Visitor Management System',
-    categories: ['Web', 'Operations'],
-    description:
-      'React visitor management system with meeting / appointment scheduling and digital pass issuance — 100% digital visitor tracking.',
-    tech: ['React.js', 'Material UI', 'Chart.js'],
+      'Event-driven multi-agent PR reviewer. Six specialised LLM agents coordinated by a supervisor quality gate, triggered through GitHub webhooks and posting a single auditable review within 60 seconds of PR readiness. Per-repo behaviour driven by config files.',
+    tech: ['Multi-Agent Orchestration', 'LLM APIs', 'GitHub Webhooks', 'TypeScript'],
     private: true,
   },
 ];
@@ -350,7 +341,7 @@ export const SECTION_META: Record<string, SectionMeta> = {
   projects: {
     number: '§ 04',
     tag: 'Selected Work',
-    title: 'Field Notes',
+    title: 'Featured Projects',
     subtitle: 'Shipped products and side projects — a selection from the archive.',
   },
   currently: {

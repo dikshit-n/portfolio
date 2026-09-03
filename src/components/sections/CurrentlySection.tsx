@@ -23,7 +23,7 @@ export function CurrentlySection() {
   const meta = SECTION_META.currently!;
 
   return (
-    <section id="currently" className="wrap scroll-mt-24 py-20 md:py-28">
+    <section id="currently" className="wrap scroll-mt-5 py-20 md:py-28">
       <SectionHeader number={meta.number} tag={meta.tag} title={meta.title} />
 
       <motion.div

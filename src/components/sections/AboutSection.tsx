@@ -9,7 +9,7 @@ export function AboutSection() {
   const meta = SECTION_META.about!;
 
   return (
-    <section id="about" className="wrap scroll-mt-24 py-20 md:py-28">
+    <section id="about" className="wrap scroll-mt-5 py-20 md:py-28">
       <SectionHeader number={meta.number} tag={meta.tag} title={meta.title} />
 
       <motion.div
