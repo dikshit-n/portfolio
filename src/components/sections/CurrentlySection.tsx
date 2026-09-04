@@ -1,18 +1,17 @@
 import { motion } from 'framer-motion';
-import { Briefcase, Users, BookOpen, MessageCircle } from 'lucide-react';
+import { Users, BookOpen, MessageCircle } from 'lucide-react';
 import { CURRENTLY, SECTION_META } from '@/data/portfolio';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { cn } from '@/lib/cn';
 
 type Cell = {
-  icon: typeof Briefcase;
+  icon: typeof Users;
   label: string;
   value: string;
 };
 
 const CELLS: Cell[] = [
-  { icon: Briefcase, label: 'Working on', value: CURRENTLY.working },
   { icon: Users, label: 'Collaborating on', value: CURRENTLY.collab },
   { icon: BookOpen, label: 'Learning', value: CURRENTLY.learning },
   { icon: MessageCircle, label: 'Ask me about', value: CURRENTLY.ask },
@@ -27,7 +26,7 @@ export function CurrentlySection() {
       <SectionHeader number={meta.number} tag={meta.tag} title={meta.title} />
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+        className="grid grid-cols-1 md:grid-cols-3"
         variants={stagger}
         initial="hidden"
         whileInView="show"
@@ -41,6 +40,7 @@ export function CurrentlySection() {
               variants={fadeUp}
               className={cn(
                 'border-t-2 border-ink p-6',
+                // Add right divider to all but the last cell on md+
                 i < CELLS.length - 1 ? 'md:border-r md:border-r-ink' : '',
               )}
             >

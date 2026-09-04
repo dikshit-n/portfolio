@@ -19,13 +19,22 @@ const NAV_LINKS: NavLink[] = [
   { label: 'Tech Stack', href: '#techstack' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Contributions', href: '#contributions' },
   { label: 'Currently', href: '#currently' },
   { label: 'Contact', href: '#contact' },
-  { label: 'Résumé', href: SITE.resumeUrl, external: true, chip: 'PDF' },
+  // { label: 'Résumé', href: SITE.resumeUrl, external: true, chip: 'PDF' },
   { label: 'Hire me', href: '#contact', filled: true },
 ];
 
-const SECTION_IDS = ['about', 'techstack', 'experience', 'projects', 'currently', 'contact'];
+const SECTION_IDS = [
+  'about',
+  'techstack',
+  'experience',
+  'projects',
+  'contributions',
+  'currently',
+  'contact',
+];
 
 export function Header() {
   const [open, setOpen] = useState(false);

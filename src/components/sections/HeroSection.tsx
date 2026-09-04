@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
-import { ArrowDownRight, FileText, MapPin } from 'lucide-react';
-import { HERO,
+import { ArrowDownRight, FileText, Github, MapPin } from 'lucide-react';
+import {
+  HERO,
   // MARQUEE_TECH,
-SITE } from '@/data/portfolio';
+  SITE,
+} from '@/data/portfolio';
 // import { Marquee } from '@/components/ui/Marquee';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
@@ -87,7 +89,10 @@ export function HeroSection() {
               <p className="max-w-2xl border-l-2 border-accent pl-5 text-lg leading-relaxed text-ink md:text-xl">
                 {HERO.tagline}
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+
+              {/* Buttons — partitioned: primary CTA on the left, secondary
+                  contacts grouped on the right with a thin editorial divider. */}
+              <div className="mt-8 flex flex-col items-start gap-y-4 sm:flex-row sm:items-center sm:gap-x-5">
                 <a
                   href="#projects"
                   className="group inline-flex items-center gap-2 border border-ink bg-ink px-6 py-3 font-display text-base font-bold text-paper transition-colors hover:border-accent hover:bg-accent"
@@ -98,18 +103,36 @@ export function HeroSection() {
                     className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5"
                   />
                 </a>
-                <a href="#contact" className="font-display text-base font-bold link-anim">
-                  Let's Connect
-                </a>
-                <a
-                  href={SITE.resumeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-display text-base font-bold link-anim"
+
+                <div
+                  className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6 sm:border-l sm:border-rule sm:pl-5"
+                  aria-label="Secondary actions"
                 >
-                  <FileText size={17} className="text-accent" />
-                  Résumé
-                </a>
+                  <a
+                    href="#contact"
+                    className="font-display text-base font-bold link-anim"
+                  >
+                    Let's Connect
+                  </a>
+                  <a
+                    href={SITE.resumeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-display text-base font-bold link-anim"
+                  >
+                    <FileText size={17} className="text-accent" />
+                    Résumé
+                  </a>
+                  <a
+                    href={SITE.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-display text-base font-bold link-anim"
+                  >
+                    <Github size={17} className="text-accent" />
+                    GitHub
+                  </a>
+                </div>
               </div>
             </motion.div>
           </motion.div>

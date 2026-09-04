@@ -1,4 +1,11 @@
-import type { Project, Role, SectionMeta, Stat, TechCategory } from '@/types/portfolio';
+import type {
+  Contribution,
+  Project,
+  Role,
+  SectionMeta,
+  Stat,
+  TechCategory,
+} from '@/types/portfolio';
 
 /* ----------------------------------------------------------------------------
    Site identity
@@ -30,7 +37,7 @@ export const HERO = {
 /* ----------------------------------------------------------------------------
    About / Summary / Stats
 ---------------------------------------------------------------------------- */
-export const SUMMARY = `I build production React.js and React Native applications for US, Canadian, and UAE clients — most recently an offline-first healthcare app on iOS and Android processing 10,000 appointments per day. I own architecture end-to-end: offline sync, real-time data layers, authentication bridges, and the release pipeline that ships them. Lately I've been building agentic systems too, including a multi-agent PR reviewer (Githena) and custom MCP server integrations for Claude Code.`;
+export const SUMMARY = `I build production React and React Native applications. I’m a developer who cares about clean architecture, reliable systems, and simple code. And I think the next decade of frontend is going to be defined by how well we integrate LLM agents without breaking the user experience.`;
 
 export const STATS: Stat[] = [
   { value: '5+', label: 'Years shipping' },
@@ -279,19 +286,45 @@ export const PROJECTS: Project[] = [
 export const CURRENTLY = {
   working: 'Developer productivity through agentic coding workflows and reusable prompt-engineering patterns',
   collab: 'Open-source maintainers and engineering teams on improving developer-facing documentation and tooling',
-  learning: 'Scalable system design, MCP ecosystem, advanced agent orchestration, AI-assisted development with claude code.',
-  ask: 'React JS performant apps, React Native offline-first, AWS serverless, healthcare compliance, AI engineering.',
+  learning: 'Scalable system design, MCP ecosystem, advanced agent orchestration, Secure AI-assisted development with claude code.',
+  ask: 'React JS performant apps, React Native offline-first, AWS serverless, healthcare compliance.',
 };
 
 /* ----------------------------------------------------------------------------
-   Achievements / OSS
+   Open source contributions
+   Cards show repo + stars + status only. The actual change lives behind
+   the URL — click through to see the PR title, diff, or commit list.
 ---------------------------------------------------------------------------- */
-export const ACHIEVEMENTS = [
+export const CONTRIBUTIONS: Contribution[] = [
   {
-    title: 'electric-sql/electric — OSS contribution',
-    detail:
-      'Contributed merged documentation improvements to electric-sql/electric (10.3k ★, Apache-2.0) — added cross-links that improved discoverability of error-handling guidance; merged by a maintainer within 33 hours.',
-    url: 'https://github.com/electric-sql/electric',
+    index: '01',
+    owner: 'pubkey',
+    repo: 'rxdb',
+    description:
+      'A realtime, local-first database for JavaScript applications — runs on every JS runtime and replicates with your existing backend. No vendor, no lock-in.',
+    stars: '23.4k',
+    type: 'merged',
+    url: 'https://github.com/pubkey/rxdb/commits/master/?author=dikshit-n',
+  },
+  {
+    index: '02',
+    owner: 'TanStack',
+    repo: 'form',
+    description:
+      'Headless, performant, and type-safe form state management for TS/JS, React, Vue, Angular, Solid, and Lit.',
+    stars: '6.7k',
+    type: 'review',
+    url: 'https://github.com/TanStack/form/pull/2371',
+  },
+  {
+    index: '03',
+    owner: 'TanStack',
+    repo: 'router',
+    description:
+      'A client-first, server-capable, fully type-safe router and full-stack framework for the web (React and more).',
+    stars: '15.0k',
+    type: 'review',
+    url: 'https://github.com/TanStack/router/pull/8232',
   },
 ];
 
@@ -344,13 +377,20 @@ export const SECTION_META: Record<string, SectionMeta> = {
     title: 'Featured Projects',
     subtitle: 'Shipped products and side projects — a selection from the archive.',
   },
-  currently: {
+  contributions: {
     number: '§ 05',
+    tag: 'Open Source',
+    title: 'Contributions',
+    subtitle:
+      'Merged contributions and code reviews across the React and local-first ecosystems.',
+  },
+  currently: {
+    number: '§ 06',
     tag: 'Stop Press',
     title: 'Currently',
   },
   contact: {
-    number: '§ 06',
+    number: '§ 07',
     tag: 'Correspondence',
     title: "Let's build",
   },

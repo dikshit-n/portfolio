@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Mail, Linkedin, Github } from 'lucide-react';
+import { ArrowUpRight, Mail, Linkedin, Github, FileText } from 'lucide-react';
 import { SECTION_META, SITE } from '@/data/portfolio';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
@@ -13,10 +13,11 @@ type Row = {
 
 const ROWS: Row[] = [
   {
-    label: 'Email',
-    value: SITE.email,
-    href: `mailto:${SITE.email}`,
-    icon: Mail,
+    label: 'Resume',
+    value: 'My Resume',
+    href: SITE.resumeUrl,
+    icon: FileText,
+    external: true
   },
   {
     label: 'LinkedIn',
@@ -41,7 +42,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-14 border-t-2 border-ink bg-ink py-20 text-paper md:py-28"
+      className="border-t-2 border-ink bg-ink py-20 text-paper md:py-28"
     >
       <div className="wrap">
         <motion.div
@@ -77,7 +78,7 @@ export function ContactSection() {
             className="mt-8 max-w-xl text-xl leading-relaxed text-paper/70"
           >
             Have a role, a project, or an idea worth shipping? I'm{' '}
-            <span className="text-accent">open to opportunities</span> and reply
+            <span className="text-accent">open to opportunities worldwide</span> and reply
             fast.
           </motion.p>
 
