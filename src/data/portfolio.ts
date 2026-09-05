@@ -277,6 +277,7 @@ export const PROJECTS: Project[] = [
       'Event-driven multi-agent PR reviewer. Six specialised LLM agents coordinated by a supervisor quality gate, triggered through GitHub webhooks and posting a single auditable review within 60 seconds of PR readiness. Per-repo behaviour driven by config files.',
     tech: ['Multi-Agent Orchestration', 'LLM APIs', 'GitHub Webhooks', 'TypeScript'],
     private: true,
+    url: 'https://github.com/dikshit-n/docs/blob/master/githena.md'
   },
 ];
 
