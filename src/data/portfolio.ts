@@ -30,7 +30,7 @@ export const HERO = {
   firstName: 'Dikshitkumar',
   lastName: 'N',
   tagline:
-    'Senior Frontend Engineer (SDE 3) — 5+ years shipping React.js web apps and cross-platform React Native apps for US, Canadian, and UAE clients.',
+    'Senior Frontend Engineer (SDE 3) — Nearly 6 years shipping React.js web apps and cross-platform React Native apps for US, Canadian, and UAE clients.',
   available: true,
 };
 
